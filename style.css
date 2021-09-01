@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*{
+    background: #000;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin:0;
+    padding:0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 15vh 40vh 30vh 15vh;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    grid-template-areas: "header header header"
+                         "section section section"
+                         "main main main"
+                         "footer footer footer"   
+}
+section{
+    align-self:center;
+    background: white;
+    display: block;
+    grid-area: section;
+    justify-self:center;
+}
+main{
+    align-self:center;
+    background: #000;
+    grid-area: main;
+    justify-self:center;
+}
+#clock div{
+    align-items: center;
+    background: #000;
+    justify-content: center;
+}
+#clock #time{
+    display: flex;
+}
+#clock #time div{
+    margin: 0 5px;
+    position: relative;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+}
+#clock #time div span{
+    align-items: center;
+    background: #076b52;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
+    color: #fff;
+    display: block;
+    display: flex;
+    font-size: 4em;
+    font-weight: 300;
+    height: 120px;
+    justify-content: center;
+    position: relative;
+    width: 150px;
+    z-index: 10;
+}
+#clock #time div span:nth-child(2){
+    background: #076b52;
+    box-shadow: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    height: 40px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    z-index: 9;
+}
+#clock #time div:last-child span{
+    background: #076b52;
+}
+#clock #time div:last-child span:nth-child(2){
+    background: #076b52;
+}
+
+@media(max-width: 500px) {
+
+    section{
+        transform: scale(.8);
+    }
+    #clock #time div span {
+        width: 100px;
+        height: 90px;
+        font-size: 3.6em;
+    }
+    #clock #time div span:nth-child(2){
+        font-size: 0.7em;
+        height: 30px;
+        letter-spacing: 0.15em;
+    }
+}
