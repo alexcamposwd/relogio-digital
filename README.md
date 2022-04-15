@@ -22,7 +22,7 @@ O projeto é um relógio digital com imagem interativa que muda conforma o perí
 ### Analise crítica:
 Ampliar as possibilidades de funcionalidades.
 
-https://relogio-dig-ac.netlify.app/
+[Demo](https://relogio-dig-ac.netlify.app/)
 
 ### License/Licença do Projeto
 [MIT License](./LICENSE) ©
